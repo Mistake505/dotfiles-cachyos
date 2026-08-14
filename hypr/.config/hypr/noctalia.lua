@@ -2,7 +2,7 @@
 
 local primary = "rgb(cba6f7)"
 local surface = "rgb(1e1e2e)"
-local secondary = "rgb(fab387)"
+local secondary = "rgb(b4befe)"
 local error = "rgb(f38ba8)"
 
 local function apply_theme()

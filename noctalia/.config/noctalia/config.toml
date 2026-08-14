@@ -86,10 +86,17 @@ enabled = [ "dotnetrob/cat", "ezequiel/mango_layouts" ]
 corner_radius_scale = 0.0
 font_family = "Maple Mono NF"
 niri_overview_type_to_launch_enabled = true
+polkit_agent = true
 time_format = "{:%I:%M %p}"
 
     [shell.launcher]
     categories = false
+
+        [shell.launcher.providers.session]
+        global = true
+
+        [shell.launcher.providers.windows]
+        global = true
 
     [shell.panel]
     control_center_placement = "floating"
@@ -103,7 +110,7 @@ time_format = "{:%I:%M %p}"
     grid = true
 
 [theme]
-community_palette = "Catppuccin Mocha Sapphire"
+community_palette = "Catppuccin Mocha Green"
 source = "community"
 wallpaper_scheme = "faithful"
 
@@ -125,10 +132,13 @@ wallpaper_scheme = "faithful"
     ]
 
 [wallpaper.default]
-path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
+path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/cabin-4.png"
 
 [wallpaper.last]
-path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
+path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/cabin-4.png"
+
+[wallpaper.monitors.HDMI-A-1]
+path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/cabin-4.png"
 
 [widget.cat]
 type = "dotnetrob/cat:cat"
