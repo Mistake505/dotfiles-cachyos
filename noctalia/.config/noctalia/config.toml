@@ -162,6 +162,24 @@ popup_shadows = false
 community_palette = "Catppuccin Mocha Sapphire"
 source = "community"
 
+    [theme.templates]
+    builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "mango", "niri", "qt" ]
+    community_ids = [
+        "pywalfox",
+        "discord",
+        "blender",
+        "gimp",
+        "inkscape",
+        "vscode",
+        "heroiclauncher",
+        "prismlauncher",
+        "steam",
+        "fastfetch",
+        "hyprtoolkit",
+        "bat",
+        "lazygit"
+    ]
+
 [wallpaper.default]
 path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
 
