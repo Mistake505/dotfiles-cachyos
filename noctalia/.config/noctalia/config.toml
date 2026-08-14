@@ -33,6 +33,7 @@ launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
 launcher_position = "start"
 margin_edge = 8
+pinned = [ "kitty", "librewolf", "org.gnome.Nautilus", "vscodium", "equibop" ]
 radius = 0
 reserve_space = false
 show_dots = true
@@ -110,7 +111,7 @@ time_format = "{:%I:%M %p}"
     grid = true
 
 [theme]
-community_palette = "Catppuccin Mocha Green"
+community_palette = "Catppuccin Mocha Rosewater"
 source = "community"
 wallpaper_scheme = "faithful"
 
@@ -119,14 +120,16 @@ wallpaper_scheme = "faithful"
     community_ids = [
         "pywalfox",
         "discord",
+        "blender",
         "gimp",
+        "inkscape",
         "vscode",
         "heroiclauncher",
         "prismlauncher",
         "steam",
         "fastfetch",
         "obs",
-        "hyprtoolkit",
+        "papirus-icons",
         "bat",
         "lazygit"
     ]
