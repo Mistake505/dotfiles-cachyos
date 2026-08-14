@@ -5,6 +5,7 @@ concave_edge_corners = false
 enabled = false
 font_family = "Maple Mono NF"
 radius = 0
+shadow = false
 start = [ "launcher", "wallpaper", "workspaces", "active_window", "btn_2" ]
 
 [bar.islands]
@@ -18,6 +19,7 @@ concave_edge_corners = false
 font_family = "Maple Mono NF"
 margin_ends = 0
 radius = 0
+shadow = false
 start = [ "launcher", "wallpaper", "workspaces", "active_window", "btn_3" ]
 
 [control_center]
@@ -31,6 +33,7 @@ launcher_custom_image_colorize = true
 launcher_position = "start"
 radius = 0
 reserve_space = false
+shadow = false
 smart_auto_hide = true
 
 [lockscreen_widgets]
@@ -138,6 +141,7 @@ enabled = [ "noctalia/screen_recorder", "dotnetrob/cat", "noctalia/wallhaven", "
 [shell]
 corner_radius_scale = 0.0
 font_family = "Maple Mono NF"
+popup_shadows = false
 
     [shell.launcher]
     categories = false
@@ -147,6 +151,7 @@ font_family = "Maple Mono NF"
     open_near_click_control_center = true
     open_near_click_session = true
     session_placement = "floating"
+    shadow = false
     transparency_mode = "soft"
     wallpaper_placement = "floating"
 
