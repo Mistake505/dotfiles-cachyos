@@ -1,3 +1,38 @@
+[bar]
+order = [ "default", "islands" ]
+
+    [bar.default]
+    background_opacity = 0.79999998211860657
+    capsule_radius = 0
+    center = [ "cat_2", "date", "clock" ]
+    font_family = "Maple Mono NF"
+    margin_ends = 0
+    radius = 0
+
+    [bar.islands]
+    background_opacity = 0.0
+    capsule = true
+    capsule_fill = "surface"
+    capsule_opacity = 0.79999998211860657
+    capsule_radius = 0
+    center = [ "cat", "date", "clock" ]
+    concave_edge_corners = false
+    enabled = true
+    font_family = "Maple Mono NF"
+    margin_ends = 0
+    radius = 0
+
+[dock]
+background_opacity = 0.79999998211860657
+concave_edge_corners = false
+enabled = true
+launcher_custom_image = "/usr/share/icons/cachyos.svg"
+launcher_custom_image_colorize = true
+launcher_position = "start"
+radius = 0
+reserve_space = false
+smart_auto_hide = true
+
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
@@ -33,9 +68,27 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
         show_unlock_hint = true
         show_weather = true
 
+[notification]
+background_opacity = 0.79999998211860657
+
+[osd]
+background_opacity = 0.79999998211860657
+
+[plugins]
+enabled = [ "dotnetrob/cat" ]
+
+[shell]
+corner_radius_scale = 0.0
+font_family = "Maple Mono NF"
+polkit_agent = true
+
+    [shell.panel]
+    transparency_mode = "soft"
+
 [theme]
+builtin = "Catppuccin"
 community_palette = "Catppuccin Mocha Mauve-Lavender"
-source = "community"
+source = "builtin"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "mango", "niri", "qt" ]
@@ -61,3 +114,19 @@ path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
 
 [wallpaper.last]
 path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
+
+[widget.cat]
+type = "dotnetrob/cat:cat"
+
+[widget.cat_2]
+type = "dotnetrob/cat:cat"
+
+[widget.clock]
+format = "{:%I:%M %p} "
+
+[widget.launcher]
+custom_image = "/usr/share/icons/cachyos.svg"
+custom_image_colorize = true
+
+[widget.workspaces]
+style = "minimal"
