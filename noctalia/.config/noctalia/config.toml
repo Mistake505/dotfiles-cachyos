@@ -1,29 +1,30 @@
-[bar]
-order = [ "default", "islands" ]
+[bar.default]
+background_opacity = 0.79999998211860657
+capsule_radius = 0
+concave_edge_corners = false
+enabled = false
+font_family = "Maple Mono NF"
+radius = 0
+start = [ "launcher", "wallpaper", "workspaces", "active_window", "btn_2" ]
 
-    [bar.default]
-    background_opacity = 0.79999998211860657
-    capsule_radius = 0
-    font_family = "Maple Mono NF"
-    margin_ends = 0
-    radius = 0
+[bar.islands]
+background_opacity = 0.0
+capsule = true
+capsule_fill = "surface"
+capsule_opacity = 0.79999998211860657
+capsule_radius = 0
+center = [ "cat", "date", "clock" ]
+concave_edge_corners = false
+font_family = "Maple Mono NF"
+margin_ends = 0
+radius = 0
+start = [ "launcher", "wallpaper", "workspaces", "active_window", "btn_3" ]
 
-    [bar.islands]
-    background_opacity = 0.0
-    capsule = true
-    capsule_fill = "surface"
-    capsule_opacity = 0.79999998211860657
-    capsule_radius = 0
-    center = [ "cat", "date", "clock" ]
-    concave_edge_corners = false
-    enabled = true
-    font_family = "Maple Mono NF"
-    margin_ends = 0
-    radius = 0
+[control_center]
+sidebar_section = "none"
 
 [dock]
 background_opacity = 0.79999998211860657
-concave_edge_corners = false
 enabled = true
 launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
@@ -35,12 +36,62 @@ smart_auto_hide = true
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
-widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
+widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@DP-2", "lockscreen-login-box@DP-1" ]
 
     [lockscreen_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 1280.0
+    cy = 1321.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 1280.0
+    cy = 1321.0
+    output = "DP-2"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
     box_height = 196.0
@@ -73,40 +124,38 @@ background_opacity = 0.79999998211860657
 [osd]
 background_opacity = 0.79999998211860657
 
+[plugin_settings."dotnetrob/cat"]
+panel_placement = "floating"
+
+[plugin_settings."ezequiel/mango_layouts"]
+list_mode = true
+panel_open_near_click = true
+panel_position = "auto"
+
 [plugins]
-enabled = [ "dotnetrob/cat", "noctalia/timer" ]
+enabled = [ "noctalia/screen_recorder", "dotnetrob/cat", "noctalia/wallhaven", "ezequiel/mango_layouts" ]
 
 [shell]
 corner_radius_scale = 0.0
 font_family = "Maple Mono NF"
-polkit_agent = true
+
+    [shell.launcher]
+    categories = false
 
     [shell.panel]
+    control_center_placement = "floating"
+    open_near_click_control_center = true
+    open_near_click_session = true
+    session_placement = "floating"
     transparency_mode = "soft"
+    wallpaper_placement = "floating"
+
+    [shell.session]
+    grid = true
 
 [theme]
-builtin = "Catppuccin"
-community_palette = "Catppuccin Mocha Mauve-Lavender"
-source = "builtin"
-
-    [theme.templates]
-    builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "mango", "niri", "qt" ]
-    community_ids = [
-        "pywalfox",
-        "discord",
-        "blender",
-        "gimp",
-        "inkscape",
-        "vscode",
-        "heroiclauncher",
-        "prismlauncher",
-        "steam",
-        "fastfetch",
-        "hyprtoolkit",
-        "papirus-icons",
-        "bat",
-        "lazygit"
-    ]
+community_palette = "Catppuccin Mocha Sapphire"
+source = "community"
 
 [wallpaper.default]
 path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
@@ -114,14 +163,20 @@ path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
 [wallpaper.last]
 path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
 
+[widget.btn]
+show_text = true
+type = "ezequiel/mango_layouts:btn"
+
+[widget.btn_2]
+show_text = true
+type = "ezequiel/mango_layouts:btn"
+
+[widget.btn_3]
+show_text = true
+type = "ezequiel/mango_layouts:btn"
+
 [widget.cat]
 type = "dotnetrob/cat:cat"
-
-[widget.cat_2]
-type = "dotnetrob/cat:cat"
-
-[widget.clock]
-format = "{:%I:%M %p} "
 
 [widget.launcher]
 custom_image = "/usr/share/icons/cachyos.svg"
