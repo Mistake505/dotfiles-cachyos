@@ -1,3 +1,6 @@
+[backdrop]
+enabled = true
+
 [bar.default]
 background_opacity = 0.79999998211860657
 capsule_radius = 0
@@ -33,7 +36,7 @@ launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
 launcher_position = "start"
 margin_edge = 8
-pinned = [ "kitty", "librewolf", "org.gnome.Nautilus", "vscodium", "equibop" ]
+pinned = [ "librewolf", "equibop", "org.gnome.Nautilus", "kitty", "vscodium", "com.shellyorg.shelly" ]
 radius = 0
 reserve_space = false
 show_dots = true
@@ -111,7 +114,7 @@ time_format = "{:%I:%M %p}"
     grid = true
 
 [theme]
-community_palette = "Catppuccin Mocha Rosewater"
+community_palette = "Catppuccin Mocha Lavender"
 source = "community"
 wallpaper_scheme = "faithful"
 
