@@ -70,8 +70,10 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
     box_height = 196.0
     box_width = 810.0
     cx = 1280.0
-    cy = 1258.0
+    cy = 1152.0
     output = "HDMI-A-1"
+    placement_height = 1152.0
+    placement_width = 2048.0
     rotation = 0.0
     type = "login_box"
 
@@ -108,7 +110,7 @@ browser_placement = "floating"
 panel_placement = "floating"
 
 [plugins]
-auto_update = true
+auto_update = "all"
 enabled = [
     "ezequiel/mango_layouts",
     "dotnetrob/cat",
@@ -140,16 +142,14 @@ niri_overview_type_to_launch_enabled = true
 polkit_agent = true
 time_format = "{:%I:%M %p}"
 
-    [shell.launcher]
-    categories = false
+    [shell.launcher.providers.session]
+    global = true
 
-        [shell.launcher.providers.session]
-        global = true
-
-        [shell.launcher.providers.windows]
-        global = true
+    [shell.launcher.providers.windows]
+    global = true
 
     [shell.panel]
+    control_center_placement = "floating"
     open_near_click_control_center = true
     open_near_click_session = true
     session_placement = "floating"
@@ -160,11 +160,11 @@ time_format = "{:%I:%M %p}"
     grid = true
 
 [theme]
-builtin = "Nord"
+builtin = "Catppuccin"
 community_palette = "Catppuccin Frappe Lavender"
 custom_palette = "custom"
 mode = "dark"
-source = "custom"
+source = "builtin"
 wallpaper_scheme = "faithful"
 
     [theme.templates]
@@ -190,13 +190,13 @@ wallpaper_scheme = "faithful"
 fill_mode = "fit"
 
     [wallpaper.default]
-    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-d8owel.jpg"
+    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-0qw3vq.jpg"
 
     [wallpaper.last]
-    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-d8owel.jpg"
+    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-0qw3vq.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-d8owel.jpg"
+    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-0qw3vq.jpg"
 
 [widget.cat]
 type = "dotnetrob/cat:cat"
@@ -219,3 +219,6 @@ custom_image_colorize = true
 
 [widget.wallhaven]
 type = "noctalia/wallhaven:wallhaven"
+
+[widget.workspaces]
+show_labels = false
