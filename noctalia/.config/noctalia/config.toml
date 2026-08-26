@@ -4,8 +4,8 @@ enabled = true
 [bar.default]
 background_opacity = 0.79999998211860657
 capsule_radius = 0
-center = [ "eyecare-widget", "cat_2", "date", "clock" ]
-enabled = true
+center = [ "cat_2", "bar", "date", "clock", "eyecare-widget" ]
+enabled = false
 end = [
     "media",
     "tray",
@@ -29,16 +29,17 @@ start = [ "launcher", "wallpaper", "workspaces", "active_window", "wallhaven" ]
 [bar.islands]
 background_opacity = 0.0
 capsule = true
+capsule_border = "primary"
 capsule_fill = "surface"
 capsule_opacity = 0.79999998211860657
 capsule_radius = 0
-center = [ "cat", "date", "clock" ]
+center = [ "cat", "bar_2", "date", "clock", "eyecare_widget_2" ]
 concave_edge_corners = false
-enabled = false
+enabled = true
 font_family = "Maple Mono NF"
 margin_ends = 0
 radius = 0
-start = [ "launcher", "wallpaper", "workspaces", "active_window" ]
+start = [ "launcher", "wallpaper", "workspaces", "wallhaven_2", "active_window" ]
 
 [control_center]
 sidebar_section = "none"
@@ -99,9 +100,15 @@ background_opacity = 0.79999998211860657
 [osd]
 background_opacity = 0.79999998211860657
 
+[plugin_settings."dotnetrob/cat"]
+panel_placement = "floating"
+
 [plugin_settings."noctalia/example"]
 panel_open_near_click = true
 panel_position = "auto"
+
+[plugin_settings."noctalia/timer"]
+panel_placement = "floating"
 
 [plugin_settings."noctalia/wallhaven"]
 browser_placement = "floating"
@@ -117,7 +124,8 @@ enabled = [
     "noctalia/wallhaven",
     "whyoolw/dropwall",
     "uozzoku/colorscheme_variants",
-    "apex077/eyecare"
+    "apex077/eyecare",
+    "noctalia/timer"
 ]
 
     [[plugins.source]]
@@ -130,11 +138,6 @@ enabled = [
     location = "https://github.com/noctalia-dev/community-plugins"
     name = "community"
 
-    [[plugins.source]]
-    kind = "path"
-    location = "~/Projects/me-plugins"
-    name = "me-plugins"
-
 [shell]
 corner_radius_scale = 0.0
 font_family = "Maple Mono NF"
@@ -142,11 +145,14 @@ niri_overview_type_to_launch_enabled = true
 polkit_agent = true
 time_format = "{:%I:%M %p}"
 
-    [shell.launcher.providers.session]
-    global = true
+    [shell.launcher]
+    categories = false
 
-    [shell.launcher.providers.windows]
-    global = true
+        [shell.launcher.providers.session]
+        global = true
+
+        [shell.launcher.providers.windows]
+        global = true
 
     [shell.panel]
     control_center_placement = "floating"
@@ -160,11 +166,10 @@ time_format = "{:%I:%M %p}"
     grid = true
 
 [theme]
-builtin = "Catppuccin"
+builtin = "Rosé Pine"
 community_palette = "Catppuccin Frappe Lavender"
 custom_palette = "custom"
 mode = "dark"
-source = "builtin"
 wallpaper_scheme = "faithful"
 
     [theme.templates]
@@ -190,13 +195,19 @@ wallpaper_scheme = "faithful"
 fill_mode = "fit"
 
     [wallpaper.default]
-    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-0qw3vq.jpg"
+    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
 
     [wallpaper.last]
-    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-0qw3vq.jpg"
+    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-0qw3vq.jpg"
+    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
+
+[widget.bar]
+type = "noctalia/timer:bar"
+
+[widget.bar_2]
+type = "noctalia/timer:bar"
 
 [widget.cat]
 type = "dotnetrob/cat:cat"
@@ -213,11 +224,17 @@ type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
 [widget.eyecare-widget]
 type = "apex077/eyecare:eyecare-widget"
 
+[widget.eyecare_widget_2]
+type = "apex077/eyecare:eyecare-widget"
+
 [widget.launcher]
 custom_image = "/usr/share/icons/cachyos.svg"
 custom_image_colorize = true
 
 [widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.wallhaven_2]
 type = "noctalia/wallhaven:wallhaven"
 
 [widget.workspaces]
