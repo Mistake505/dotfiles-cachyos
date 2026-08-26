@@ -247,11 +247,11 @@ time_format = "{:%I:%M %p}"
     grid = true
 
 [theme]
-builtin = "Nord"
-community_palette = "Nord Aurora"
+builtin = "Catppuccin"
+community_palette = "Catppuccin Macchiato Lavender"
 custom_palette = "custom"
 mode = "dark"
-source = "wallpaper"
+source = "builtin"
 wallpaper_scheme = "faithful"
 
     [theme.templates]
@@ -274,13 +274,13 @@ wallpaper_scheme = "faithful"
     ]
 
 [wallpaper.default]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-8gjmgo.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-3q282d.jpg"
 
 [wallpaper.last]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-8gjmgo.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-3q282d.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-8gjmgo.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-3q282d.jpg"
 
 [widget.bar]
 type = "noctalia/timer:bar"
