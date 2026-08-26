@@ -1,45 +1,120 @@
 [backdrop]
 enabled = true
 
-[bar.default]
-background_opacity = 0.79999998211860657
-capsule_radius = 0
-center = [ "cat_2", "bar", "date", "clock", "eyecare-widget" ]
-enabled = false
-end = [
-    "media",
-    "tray",
-    "notifications",
-    "clipboard",
-    "network",
-    "bluetooth",
-    "volume",
-    "brightness",
-    "battery",
-    "colorscheme_variants_widget",
-    "control-center",
-    "session"
-]
-font_family = "Maple Mono NF"
-margin_edge = 8
-margin_ends = 8
-radius = 0
-start = [ "launcher", "wallpaper", "workspaces", "active_window", "wallhaven" ]
+[bar]
+order = [ "default", "islands", "islandsgroups" ]
 
-[bar.islands]
-background_opacity = 0.0
-capsule = true
-capsule_border = "primary"
-capsule_fill = "surface"
-capsule_opacity = 0.79999998211860657
-capsule_radius = 0
-center = [ "cat", "bar_2", "date", "clock", "eyecare_widget_2" ]
-concave_edge_corners = false
-enabled = true
-font_family = "Maple Mono NF"
-margin_ends = 0
-radius = 0
-start = [ "launcher", "wallpaper", "workspaces", "wallhaven_2", "active_window" ]
+    [bar.default]
+    background_opacity = 0.79999998211860657
+    capsule_radius = 0
+    center = [ "cat_2", "date", "clock", "eyecare-widget", "bar" ]
+    end = [
+        "media",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "colorscheme_variants_widget",
+        "control-center",
+        "session"
+    ]
+    font_family = "Maple Mono NF"
+    margin_edge = 8
+    margin_ends = 8
+    radius = 0
+    start = [ "launcher", "wallpaper", "workspaces", "active_window", "wallhaven" ]
+
+    [bar.islands]
+    background_opacity = 0.0
+    capsule = true
+    capsule_border = "primary"
+    capsule_fill = "surface"
+    capsule_opacity = 0.79999998211860657
+    capsule_radius = 0
+    center = [ "cat", "date", "clock", "eyecare_widget_2", "bar_2" ]
+    concave_edge_corners = false
+    enabled = false
+    end = [
+        "media",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "colorscheme_variants_widget_2",
+        "control-center",
+        "session"
+    ]
+    font_family = "Maple Mono NF"
+    margin_ends = 0
+    radius = 0
+    start = [ "launcher", "wallpaper", "workspaces", "wallhaven_2", "active_window" ]
+
+    [bar.islandsgroups]
+    background_opacity = 0.0
+    center = [ "group:g2" ]
+    concave_edge_corners = false
+    enabled = false
+    end = [ "group:g3" ]
+    margin_ends = 0
+    radius = 0
+    start = [ "group:g1" ]
+
+        [[bar.islandsgroups.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = "primary"
+        enabled = true
+        fill = "surface"
+        id = "g1"
+        members = [ "launcher", "wallpaper", "workspaces", "wallhaven_2", "active_window" ]
+        opacity = 0.79999995231628418
+        padding = 6.0
+        radius = 0.0
+
+        [[bar.islandsgroups.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = "primary"
+        enabled = true
+        fill = "surface"
+        id = "g2"
+        members = [ "cat", "date", "clock", "eyecare_widget_2", "bar_2" ]
+        opacity = 0.79999995231628418
+        padding = 6.0
+        radius = 0.0
+
+        [[bar.islandsgroups.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = "primary"
+        enabled = true
+        fill = "surface"
+        id = "g3"
+        members = [
+            "media",
+            "tray",
+            "notifications",
+            "clipboard",
+            "network",
+            "bluetooth",
+            "volume",
+            "brightness",
+            "battery",
+            "colorscheme_variants_widget_3",
+            "control-center",
+            "session"
+        ]
+        opacity = 0.79999995231628418
+        padding = 6.0
+        radius = 0.0
 
 [control_center]
 sidebar_section = "none"
@@ -51,7 +126,7 @@ launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
 launcher_position = "start"
 margin_edge = 8
-pinned = [ "librewolf", "equibop", "org.gnome.Nautilus", "kitty", "vscodium", "com.shellyorg.shelly" ]
+pinned = [ "librewolf", "equibop", "kitty", "vscodium", "org.gnome.Nautilus" ]
 radius = 0
 reserve_space = false
 show_dots = true
@@ -112,6 +187,7 @@ panel_placement = "floating"
 
 [plugin_settings."noctalia/wallhaven"]
 browser_placement = "floating"
+download_dir = "/home/ckjos/Pictures/Wallpapers/wallhaven"
 
 [plugin_settings."uozzoku/colorscheme_variants"]
 panel_placement = "floating"
@@ -122,10 +198,10 @@ enabled = [
     "ezequiel/mango_layouts",
     "dotnetrob/cat",
     "noctalia/wallhaven",
-    "whyoolw/dropwall",
-    "uozzoku/colorscheme_variants",
     "apex077/eyecare",
-    "noctalia/timer"
+    "noctalia/timer",
+    "whyoolw/dropwall",
+    "uozzoku/colorscheme_variants"
 ]
 
     [[plugins.source]]
@@ -137,6 +213,11 @@ enabled = [
     kind = "git"
     location = "https://github.com/noctalia-dev/community-plugins"
     name = "community"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/Mistake505/noctalia-colorscheme-variants-plugin.git"
+    name = "me-plugins"
 
 [shell]
 corner_radius_scale = 0.0
@@ -166,10 +247,11 @@ time_format = "{:%I:%M %p}"
     grid = true
 
 [theme]
-builtin = "Rosé Pine"
-community_palette = "Catppuccin Frappe Lavender"
+builtin = "Nord"
+community_palette = "Nord Aurora"
 custom_palette = "custom"
 mode = "dark"
+source = "wallpaper"
 wallpaper_scheme = "faithful"
 
     [theme.templates]
@@ -191,17 +273,14 @@ wallpaper_scheme = "faithful"
         "lazygit"
     ]
 
-[wallpaper]
-fill_mode = "fit"
+[wallpaper.default]
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-8gjmgo.jpg"
 
-    [wallpaper.default]
-    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
+[wallpaper.last]
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-8gjmgo.jpg"
 
-    [wallpaper.last]
-    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
-
-    [wallpaper.monitors.HDMI-A-1]
-    path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
+[wallpaper.monitors.HDMI-A-1]
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-8gjmgo.jpg"
 
 [widget.bar]
 type = "noctalia/timer:bar"
@@ -219,6 +298,12 @@ type = "dotnetrob/cat:cat"
 format = "{:%I:%M %p}"
 
 [widget.colorscheme_variants_widget]
+type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
+
+[widget.colorscheme_variants_widget_2]
+type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
+
+[widget.colorscheme_variants_widget_3]
 type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
 
 [widget.eyecare-widget]
