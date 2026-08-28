@@ -7,7 +7,7 @@ order = [ "default", "islands", "islandsgroups" ]
     [bar.default]
     background_opacity = 0.79999998211860657
     capsule_radius = 0
-    center = [ "cat_2", "date", "clock", "eyecare-widget", "bar" ]
+    center = [ "cat_2", "date", "clock", "bar", "eyecare-widget" ]
     end = [
         "media",
         "tray",
@@ -35,7 +35,7 @@ order = [ "default", "islands", "islandsgroups" ]
     capsule_fill = "surface"
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
-    center = [ "cat", "date", "clock", "eyecare_widget_2", "bar_2" ]
+    center = [ "cat", "date", "clock", "bar_2", "eyecare_widget_2" ]
     concave_edge_corners = false
     enabled = false
     end = [
@@ -86,7 +86,7 @@ order = [ "default", "islands", "islandsgroups" ]
         enabled = true
         fill = "surface"
         id = "g2"
-        members = [ "cat", "date", "clock", "eyecare_widget_2", "bar_2" ]
+        members = [ "cat", "date", "clock", "bar_2", "eyecare_widget_2" ]
         opacity = 0.79999995231628418
         padding = 6.0
         radius = 0.0
@@ -247,7 +247,7 @@ time_format = "{:%I:%M %p}"
     grid = true
 
 [theme]
-builtin = "Catppuccin"
+builtin = "Rosé Pine"
 community_palette = "Catppuccin Macchiato Lavender"
 custom_palette = "custom"
 mode = "dark"
@@ -274,15 +274,16 @@ wallpaper_scheme = "faithful"
     ]
 
 [wallpaper.default]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-3q282d.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
 
 [wallpaper.last]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-3q282d.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-3q282d.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
 
 [widget.bar]
+show_idle_on_horizontal = false
 type = "noctalia/timer:bar"
 
 [widget.bar_2]
