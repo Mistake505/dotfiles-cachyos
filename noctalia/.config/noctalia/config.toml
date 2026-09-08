@@ -7,26 +7,26 @@ order = [ "default", "islands", "islandsgroups" ]
     [bar.default]
     background_opacity = 0.79999998211860657
     capsule_radius = 0
-    center = [ "cat_2", "date", "clock", "bar", "eyecare-widget" ]
+    center = [ "cat_2", "cpu", "ram", "temp", "network_rx", "network_tx" ]
     end = [
         "media",
+        "date",
+        "clock",
         "tray",
+        "eyecare-widget",
         "notifications",
         "clipboard",
         "network",
         "bluetooth",
         "volume",
-        "brightness",
-        "battery",
         "colorscheme_variants_widget",
-        "control-center",
         "session"
     ]
     font_family = "Maple Mono NF"
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "workspaces", "active_window", "wallhaven" ]
+    start = [ "launcher", "wallpaper", "workspaces", "wallhaven", "active_window", "bar" ]
 
     [bar.islands]
     background_opacity = 0.0
@@ -35,12 +35,15 @@ order = [ "default", "islands", "islandsgroups" ]
     capsule_fill = "surface"
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
-    center = [ "cat", "date", "clock", "bar_2", "eyecare_widget_2" ]
+    center = [ "cat", "cpu", "ram", "temp", "network_rx", "network_tx" ]
     concave_edge_corners = false
     enabled = false
     end = [
         "media",
+        "date",
+        "clock",
         "tray",
+        "eyecare_widget_2",
         "notifications",
         "clipboard",
         "network",
@@ -55,17 +58,21 @@ order = [ "default", "islands", "islandsgroups" ]
     font_family = "Maple Mono NF"
     margin_ends = 0
     radius = 0
-    start = [ "launcher", "wallpaper", "workspaces", "wallhaven_2", "active_window" ]
+    start = [ "launcher", "wallpaper", "workspaces", "wallhaven_2", "active_window", "bar_2" ]
 
     [bar.islandsgroups]
     background_opacity = 0.0
-    center = [ "group:g2" ]
+    capsule = true
+    capsule_border = "primary"
+    capsule_fill = "surface"
+    capsule_opacity = 0.79999998211860657
+    capsule_radius = 0
+    center = [ "group:g4" ]
     concave_edge_corners = false
     enabled = false
     end = [ "group:g3" ]
     margin_ends = 0
     radius = 0
-    start = [ "group:g1" ]
 
         [[bar.islandsgroups.capsule_group]]
         accordion = false
@@ -74,19 +81,7 @@ order = [ "default", "islands", "islandsgroups" ]
         enabled = true
         fill = "surface"
         id = "g1"
-        members = [ "launcher", "wallpaper", "workspaces", "wallhaven_2", "active_window" ]
-        opacity = 0.79999995231628418
-        padding = 6.0
-        radius = 0.0
-
-        [[bar.islandsgroups.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        border = "primary"
-        enabled = true
-        fill = "surface"
-        id = "g2"
-        members = [ "cat", "date", "clock", "bar_2", "eyecare_widget_2" ]
+        members = [ "launcher", "wallpaper", "workspaces", "wallhaven_2", "active_window", "bar_2" ]
         opacity = 0.79999995231628418
         padding = 6.0
         radius = 0.0
@@ -100,7 +95,10 @@ order = [ "default", "islands", "islandsgroups" ]
         id = "g3"
         members = [
             "media",
+            "date",
+            "clock",
             "tray",
+            "eyecare_widget_2",
             "notifications",
             "clipboard",
             "network",
@@ -116,6 +114,18 @@ order = [ "default", "islands", "islandsgroups" ]
         padding = 6.0
         radius = 0.0
 
+        [[bar.islandsgroups.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = "primary"
+        enabled = true
+        fill = "surface"
+        id = "g4"
+        members = [ "cat", "cpu", "temp", "ram", "network_rx", "network_tx" ]
+        opacity = 0.79999995231628418
+        padding = 6.0
+        radius = 0.0
+
 [control_center]
 sidebar_section = "none"
 
@@ -126,7 +136,6 @@ launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
 launcher_position = "start"
 margin_edge = 8
-pinned = [ "librewolf", "equibop", "kitty", "vscodium", "org.gnome.Nautilus" ]
 radius = 0
 reserve_space = false
 show_dots = true
@@ -215,9 +224,15 @@ enabled = [
     name = "community"
 
     [[plugins.source]]
+    enabled = false
     kind = "git"
     location = "https://github.com/Mistake505/noctalia-colorscheme-variants-plugin.git"
     name = "me-plugins"
+
+    [[plugins.source]]
+    kind = "path"
+    location = "/home/ckjos/Projects/me-plugins"
+    name = "me-plugins-local"
 
 [shell]
 corner_radius_scale = 0.0
@@ -247,8 +262,8 @@ time_format = "{:%I:%M %p}"
     grid = true
 
 [theme]
-builtin = "Rosé Pine"
-community_palette = "Catppuccin Macchiato Lavender"
+builtin = "Tokyo-Night"
+community_palette = "Rose Pine Moon"
 custom_palette = "custom"
 mode = "dark"
 source = "builtin"
@@ -263,6 +278,7 @@ wallpaper_scheme = "faithful"
         "gimp",
         "inkscape",
         "vscode",
+        "zed",
         "heroiclauncher",
         "prismlauncher",
         "steam",
@@ -274,19 +290,20 @@ wallpaper_scheme = "faithful"
     ]
 
 [wallpaper.default]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/aesthetic.png"
 
 [wallpaper.last]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/aesthetic.png"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven_6kmrzl.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/aesthetic.png"
 
 [widget.bar]
 show_idle_on_horizontal = false
 type = "noctalia/timer:bar"
 
 [widget.bar_2]
+show_idle_on_horizontal = false
 type = "noctalia/timer:bar"
 
 [widget.cat]
@@ -307,6 +324,9 @@ type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
 [widget.colorscheme_variants_widget_3]
 type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
 
+[widget.cpu]
+visualization = "none"
+
 [widget.eyecare-widget]
 type = "apex077/eyecare:eyecare-widget"
 
@@ -316,6 +336,27 @@ type = "apex077/eyecare:eyecare-widget"
 [widget.launcher]
 custom_image = "/usr/share/icons/cachyos.svg"
 custom_image_colorize = true
+
+[widget.network]
+show_label = false
+
+[widget.network_rx]
+label_show_units = false
+visualization = "none"
+
+[widget.network_tx]
+label_show_units = false
+visualization = "none"
+
+[widget.ram]
+label_show_units = false
+visualization = "none"
+
+[widget.taskbar]
+scale = 2.5
+
+[widget.temp]
+visualization = "none"
 
 [widget.wallhaven]
 type = "noctalia/wallhaven:wallhaven"
