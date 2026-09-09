@@ -12,8 +12,8 @@ order = [ "default", "islands", "islandsgroups" ]
         "media",
         "date",
         "clock",
-        "tray",
         "eyecare-widget",
+        "tray",
         "notifications",
         "clipboard",
         "network",
@@ -26,7 +26,7 @@ order = [ "default", "islands", "islandsgroups" ]
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "workspaces", "wallhaven", "active_window", "bar" ]
+    start = [ "launcher", "wallpaper", "wallhaven", "workspaces", "active_window", "bar" ]
 
     [bar.islands]
     background_opacity = 0.0
@@ -42,15 +42,13 @@ order = [ "default", "islands", "islandsgroups" ]
         "media",
         "date",
         "clock",
-        "tray",
         "eyecare_widget_2",
+        "tray",
         "notifications",
         "clipboard",
         "network",
         "bluetooth",
         "volume",
-        "brightness",
-        "battery",
         "colorscheme_variants_widget_2",
         "control-center",
         "session"
@@ -58,7 +56,7 @@ order = [ "default", "islands", "islandsgroups" ]
     font_family = "Maple Mono NF"
     margin_ends = 0
     radius = 0
-    start = [ "launcher", "wallpaper", "workspaces", "wallhaven_2", "active_window", "bar_2" ]
+    start = [ "launcher", "wallpaper", "wallhaven_2", "workspaces", "active_window", "bar_2" ]
 
     [bar.islandsgroups]
     background_opacity = 0.0
@@ -73,6 +71,7 @@ order = [ "default", "islands", "islandsgroups" ]
     end = [ "group:g3" ]
     margin_ends = 0
     radius = 0
+    start = [ "group:g2" ]
 
         [[bar.islandsgroups.capsule_group]]
         accordion = false
@@ -97,8 +96,8 @@ order = [ "default", "islands", "islandsgroups" ]
             "media",
             "date",
             "clock",
-            "tray",
             "eyecare_widget_2",
+            "tray",
             "notifications",
             "clipboard",
             "network",
@@ -126,6 +125,18 @@ order = [ "default", "islands", "islandsgroups" ]
         padding = 6.0
         radius = 0.0
 
+        [[bar.islandsgroups.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border = "primary"
+        enabled = true
+        fill = "surface"
+        id = "g2"
+        members = [ "launcher", "wallpaper", "wallhaven_3", "workspaces", "active_window", "bar_3" ]
+        opacity = 0.79999995231628418
+        padding = 6.0
+        radius = 0.0
+
 [control_center]
 sidebar_section = "none"
 
@@ -136,6 +147,7 @@ launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
 launcher_position = "start"
 margin_edge = 8
+pinned = [ "librewolf", "kitty", "org.gnome.Nautilus", "equibop", "vscodium" ]
 radius = 0
 reserve_space = false
 show_dots = true
@@ -306,6 +318,9 @@ type = "noctalia/timer:bar"
 show_idle_on_horizontal = false
 type = "noctalia/timer:bar"
 
+[widget.bar_3]
+type = "noctalia/timer:bar"
+
 [widget.cat]
 type = "dotnetrob/cat:cat"
 
@@ -341,11 +356,11 @@ custom_image_colorize = true
 show_label = false
 
 [widget.network_rx]
-label_show_units = false
+label_show_units = true
 visualization = "none"
 
 [widget.network_tx]
-label_show_units = false
+label_show_units = true
 visualization = "none"
 
 [widget.ram]
@@ -358,10 +373,17 @@ scale = 2.5
 [widget.temp]
 visualization = "none"
 
+[widget.tray]
+detached_panel = true
+drawer = true
+
 [widget.wallhaven]
 type = "noctalia/wallhaven:wallhaven"
 
 [widget.wallhaven_2]
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.wallhaven_3]
 type = "noctalia/wallhaven:wallhaven"
 
 [widget.workspaces]
