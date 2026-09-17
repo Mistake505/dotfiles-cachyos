@@ -2,7 +2,7 @@
 enabled = true
 
 [bar]
-order = [ "default", "islands", "islandsgroups" ]
+order = [ "default", "islands", "islandsgroups", "windows" ]
 
     [bar.default]
     background_opacity = 0.79999998211860657
@@ -12,7 +12,6 @@ order = [ "default", "islands", "islandsgroups" ]
         "media",
         "date",
         "clock",
-        "eyecare-widget",
         "tray",
         "notifications",
         "clipboard",
@@ -26,7 +25,7 @@ order = [ "default", "islands", "islandsgroups" ]
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "wallhaven", "workspaces", "active_window", "bar" ]
+    start = [ "launcher", "wallpaper", "wallhaven", "workspaces", "active_window", "bar", "eyecare-widget" ]
 
     [bar.islands]
     background_opacity = 0.0
@@ -42,7 +41,6 @@ order = [ "default", "islands", "islandsgroups" ]
         "media",
         "date",
         "clock",
-        "eyecare_widget_2",
         "tray",
         "notifications",
         "clipboard",
@@ -56,7 +54,7 @@ order = [ "default", "islands", "islandsgroups" ]
     font_family = "Maple Mono NF"
     margin_ends = 0
     radius = 0
-    start = [ "launcher", "wallpaper", "wallhaven_2", "workspaces", "active_window", "bar_2" ]
+    start = [ "launcher", "wallpaper", "wallhaven_2", "workspaces", "active_window", "bar_2", "eyecare_widget_2" ]
 
     [bar.islandsgroups]
     background_opacity = 0.0
@@ -71,7 +69,7 @@ order = [ "default", "islands", "islandsgroups" ]
     end = [ "group:g3" ]
     margin_ends = 0
     radius = 0
-    start = [ "group:g2" ]
+    start = [ "group:g2", "eyecare_widget_2" ]
 
         [[bar.islandsgroups.capsule_group]]
         accordion = false
@@ -96,7 +94,6 @@ order = [ "default", "islands", "islandsgroups" ]
             "media",
             "date",
             "clock",
-            "eyecare_widget_2",
             "tray",
             "notifications",
             "clipboard",
@@ -137,12 +134,38 @@ order = [ "default", "islands", "islandsgroups" ]
         padding = 6.0
         radius = 0.0
 
+    [bar.windows]
+    background_opacity = 0.79999998211860657
+    capsule_radius = 0
+    center = [ "launcher", "workspaces", "taskbar" ]
+    enabled = false
+    end = [
+        "media",
+        "clock",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "control-center",
+        "session"
+    ]
+    margin_ends = 0
+    position = "bottom"
+    radius = 0
+    scale = 1.2500000111758709
+    start = [ "weather" ]
+    thickness = 44
+
 [control_center]
 sidebar_section = "none"
 
 [dock]
 background_opacity = 0.79999998211860657
-enabled = true
+enabled = false
 launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
 launcher_position = "start"
@@ -152,6 +175,9 @@ radius = 0
 reserve_space = false
 show_dots = true
 smart_auto_hide = true
+
+[location]
+auto_locate = true
 
 [lockscreen_widgets]
 enabled = false
@@ -255,6 +281,7 @@ time_format = "{:%I:%M %p}"
 
     [shell.launcher]
     categories = false
+    pinned = [ "librewolf", "kitty", "org.gnome.Nautilus", "equibop", "vscodium-wayland" ]
 
         [shell.launcher.providers.session]
         global = true
@@ -278,7 +305,6 @@ builtin = "Tokyo-Night"
 community_palette = "Rose Pine Moon"
 custom_palette = "custom"
 mode = "dark"
-source = "builtin"
 wallpaper_scheme = "faithful"
 
     [theme.templates]
@@ -298,7 +324,9 @@ wallpaper_scheme = "faithful"
         "obs",
         "papirus-icons",
         "bat",
-        "lazygit"
+        "fzf",
+        "lazygit",
+        "yazi"
     ]
 
 [wallpaper.default]
@@ -309,6 +337,9 @@ path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/aesthetic.png"
 
 [wallpaper.monitors.HDMI-A-1]
 path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/aesthetic.png"
+
+[weather]
+unit = "imperial"
 
 [widget.bar]
 show_idle_on_horizontal = false
@@ -364,11 +395,8 @@ label_show_units = true
 visualization = "none"
 
 [widget.ram]
-label_show_units = false
+label_show_units = true
 visualization = "none"
-
-[widget.taskbar]
-scale = 2.5
 
 [widget.temp]
 visualization = "none"
