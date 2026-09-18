@@ -8,6 +8,7 @@ order = [ "default", "islands", "islandsgroups", "windows" ]
     background_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_2", "cpu", "ram", "temp", "network_rx", "network_tx" ]
+    enabled = true
     end = [
         "media",
         "date",
@@ -137,7 +138,7 @@ order = [ "default", "islands", "islandsgroups", "windows" ]
     [bar.windows]
     background_opacity = 0.79999998211860657
     capsule_radius = 0
-    center = [ "launcher", "workspaces", "taskbar" ]
+    center = [ "taskbar" ]
     enabled = false
     end = [
         "media",
@@ -157,15 +158,15 @@ order = [ "default", "islands", "islandsgroups", "windows" ]
     position = "bottom"
     radius = 0
     scale = 1.2500000111758709
-    start = [ "weather" ]
-    thickness = 44
+    start = [ "launcher", "weather" ]
+    thickness = 42
 
 [control_center]
 sidebar_section = "none"
 
 [dock]
 background_opacity = 0.79999998211860657
-enabled = false
+enabled = true
 launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
 launcher_position = "start"
@@ -280,7 +281,8 @@ polkit_agent = true
 time_format = "{:%I:%M %p}"
 
     [shell.launcher]
-    categories = false
+    app_grid = true
+    categories = true
     pinned = [ "librewolf", "kitty", "org.gnome.Nautilus", "equibop", "vscodium-wayland" ]
 
         [shell.launcher.providers.session]
@@ -291,7 +293,9 @@ time_format = "{:%I:%M %p}"
 
     [shell.panel]
     control_center_placement = "floating"
+    launcher_position = "auto"
     open_near_click_control_center = true
+    open_near_click_launcher = true
     open_near_click_session = true
     session_placement = "floating"
     transparency_mode = "soft"
@@ -397,6 +401,12 @@ visualization = "none"
 [widget.ram]
 label_show_units = true
 visualization = "none"
+
+[widget.taskbar]
+group_by_workspace = true
+group_single_icon_per_app = true
+hide_empty_workspaces = true
+workspace_group_capsule = false
 
 [widget.temp]
 visualization = "none"
