@@ -21,6 +21,7 @@ binds {
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+V                               hotkey-overlay-title="Clipboard: noctalia clipboard" { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Mod+Shift+E                         hotkey-overlay-title="Emoji Picker: noctalia emoji" { spawn-sh "noctalia msg panel-toggle launcher /emo"; }
+    Mod+Shift+C                         hotkey-overlay-title="Color Picker: niri" { spawn-sh "niri msg pick-color | tail -n 1 | cut -d ' ' -f 2- | wl-copy"; }
 
     // Please set the text editor of your choice.
     // Mod+Shift+E                               hotkey-overlay-title="Open Text Editor: Zed" { spawn "zed"; }
