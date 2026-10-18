@@ -2,17 +2,16 @@
 enabled = true
 
 [bar]
-order = [ "default", "islands", "islandsgroups", "windows" ]
+order = [ "default", "defaultlayout", "windows", "sysmon" ]
 
     [bar.default]
-    background_opacity = 0.79999998211860657
+    background_opacity = 0.54999998770654202
+    border = "primary"
+    border_width = 2.0
     capsule_radius = 0
-    center = [ "cat_2", "cpu", "ram", "temp", "network_rx", "network_tx" ]
-    enabled = true
+    center = [ "bar", "date", "clock", "eyecare-widget" ]
     end = [
         "media",
-        "date",
-        "clock",
         "tray",
         "notifications",
         "clipboard",
@@ -22,163 +21,69 @@ order = [ "default", "islands", "islandsgroups", "windows" ]
         "colorscheme_variants_widget",
         "session"
     ]
-    font_family = "Maple Mono NF"
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "wallhaven", "workspaces", "active_window", "bar", "eyecare-widget" ]
+    start = [ "launcher", "wallpaper", "workspaces", "wallhaven", "active_window" ]
 
-    [bar.islands]
-    background_opacity = 0.0
-    capsule = true
-    capsule_border = "primary"
-    capsule_fill = "surface"
-    capsule_opacity = 0.79999998211860657
+    [bar.defaultlayout]
+    background_opacity = 0.54999998770654202
     capsule_radius = 0
-    center = [ "cat", "cpu", "ram", "temp", "network_rx", "network_tx" ]
-    concave_edge_corners = false
     enabled = false
-    end = [
-        "media",
-        "date",
-        "clock",
-        "tray",
-        "notifications",
-        "clipboard",
-        "network",
-        "bluetooth",
-        "volume",
-        "colorscheme_variants_widget_2",
-        "control-center",
-        "session"
-    ]
-    font_family = "Maple Mono NF"
-    margin_ends = 0
+    margin_edge = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "wallhaven_2", "workspaces", "active_window", "bar_2", "eyecare_widget_2" ]
 
-    [bar.islandsgroups]
-    background_opacity = 0.0
-    capsule = true
-    capsule_border = "primary"
-    capsule_fill = "surface"
-    capsule_opacity = 0.79999998211860657
+    [bar.sysmon]
+    background_opacity = 0.54999998770654202
+    border = "primary"
+    border_width = 2.0
     capsule_radius = 0
-    center = [ "group:g4" ]
-    concave_edge_corners = false
-    enabled = false
-    end = [ "group:g3" ]
-    margin_ends = 0
+    center = [ "cat_3", "cpu", "ram", "temp", "network_rx", "network_tx" ]
+    enabled = true
+    end = []
+    margin_edge = 8
+    margin_ends = 380
+    position = "left"
     radius = 0
-    start = [ "group:g2", "eyecare_widget_2" ]
-
-        [[bar.islandsgroups.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        border = "primary"
-        enabled = true
-        fill = "surface"
-        id = "g1"
-        members = [ "launcher", "wallpaper", "workspaces", "wallhaven_2", "active_window", "bar_2" ]
-        opacity = 0.79999995231628418
-        padding = 6.0
-        radius = 0.0
-
-        [[bar.islandsgroups.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        border = "primary"
-        enabled = true
-        fill = "surface"
-        id = "g3"
-        members = [
-            "media",
-            "date",
-            "clock",
-            "tray",
-            "notifications",
-            "clipboard",
-            "network",
-            "bluetooth",
-            "volume",
-            "brightness",
-            "battery",
-            "colorscheme_variants_widget_3",
-            "control-center",
-            "session"
-        ]
-        opacity = 0.79999995231628418
-        padding = 6.0
-        radius = 0.0
-
-        [[bar.islandsgroups.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        border = "primary"
-        enabled = true
-        fill = "surface"
-        id = "g4"
-        members = [ "cat", "cpu", "temp", "ram", "network_rx", "network_tx" ]
-        opacity = 0.79999995231628418
-        padding = 6.0
-        radius = 0.0
-
-        [[bar.islandsgroups.capsule_group]]
-        accordion = false
-        accordion_direction = "end"
-        border = "primary"
-        enabled = true
-        fill = "surface"
-        id = "g2"
-        members = [ "launcher", "wallpaper", "wallhaven_3", "workspaces", "active_window", "bar_3" ]
-        opacity = 0.79999995231628418
-        padding = 6.0
-        radius = 0.0
+    reserve_space = false
+    scale = 1.2500000111758709
+    smart_auto_hide = true
+    start = []
+    thickness = 100
 
     [bar.windows]
-    background_opacity = 0.79999998211860657
     capsule_radius = 0
-    center = [ "taskbar" ]
     enabled = false
-    end = [
-        "media",
-        "clock",
-        "tray",
-        "notifications",
-        "clipboard",
-        "network",
-        "bluetooth",
-        "volume",
-        "brightness",
-        "battery",
-        "control-center",
-        "session"
-    ]
-    margin_ends = 0
-    position = "bottom"
     radius = 0
-    scale = 1.2500000111758709
-    start = [ "launcher", "weather" ]
-    thickness = 42
 
 [control_center]
 sidebar_section = "none"
 
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 64
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
 [dock]
-background_opacity = 0.79999998211860657
+background_opacity = 0.54999998770654202
+border = "primary"
+border_width = 2.0
 enabled = true
 launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
 launcher_position = "start"
 margin_edge = 8
-pinned = [ "librewolf", "kitty", "org.gnome.Nautilus", "equibop", "vscodium" ]
+pinned = [ "librewolf", "equibop", "kitty" ]
 radius = 0
 reserve_space = false
 show_dots = true
 smart_auto_hide = true
-
-[location]
-auto_locate = true
 
 [lockscreen_widgets]
 enabled = false
@@ -218,10 +123,14 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
         show_weather = true
 
 [notification]
-background_opacity = 0.79999998211860657
+background_opacity = 0.54999998770654202
+border_color = "primary"
+border_width = 2.0
 
 [osd]
-background_opacity = 0.79999998211860657
+background_opacity = 0.54999998770654202
+border_color = "primary"
+border_width = 2.0
 
 [plugin_settings."dotnetrob/cat"]
 panel_placement = "floating"
@@ -237,6 +146,9 @@ panel_placement = "floating"
 browser_placement = "floating"
 download_dir = "/home/ckjos/Pictures/Wallpapers/wallhaven"
 
+[plugin_settings."nzlov/daily-wallpaper"]
+panel_placement = "floating"
+
 [plugin_settings."uozzoku/colorscheme_variants"]
 panel_placement = "floating"
 
@@ -249,7 +161,8 @@ enabled = [
     "apex077/eyecare",
     "noctalia/timer",
     "whyoolw/dropwall",
-    "uozzoku/colorscheme_variants"
+    "uozzoku/colorscheme_variants",
+    "nzlov/daily-wallpaper"
 ]
 
     [[plugins.source]]
@@ -277,13 +190,13 @@ enabled = [
 corner_radius_scale = 0.0
 font_family = "Maple Mono NF"
 niri_overview_type_to_launch_enabled = true
-polkit_agent = true
-time_format = "{:%I:%M %p}"
 
     [shell.launcher]
-    app_grid = true
-    categories = true
-    pinned = [ "librewolf", "kitty", "org.gnome.Nautilus", "equibop", "vscodium-wayland" ]
+    app_grid = false
+    show_app_actions = true
+
+        [shell.launcher.providers.panels]
+        global = true
 
         [shell.launcher.providers.session]
         global = true
@@ -292,29 +205,34 @@ time_format = "{:%I:%M %p}"
         global = true
 
     [shell.panel]
+    border_color = "primary"
+    border_width = 2.0
     control_center_placement = "floating"
-    launcher_position = "auto"
     open_near_click_control_center = true
-    open_near_click_launcher = true
+    open_near_click_launcher = false
     open_near_click_session = true
     session_placement = "floating"
-    transparency_mode = "soft"
+    transparency_mode = "glass"
     wallpaper_placement = "floating"
+
+    [shell.screen_corners]
+    size = 1
 
     [shell.session]
     grid = true
 
 [theme]
-builtin = "Tokyo-Night"
-community_palette = "Rose Pine Moon"
+builtin = "Rosé Pine"
+community_palette = "Catppuccin Mocha Lavender"
 custom_palette = "custom"
-mode = "dark"
-wallpaper_scheme = "faithful"
+source = "wallpaper"
+wallpaper_scheme = "soft"
 
     [theme.templates]
-    builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "mango", "niri", "qt" ]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "mango", "niri", "qt" ]
     community_ids = [
         "pywalfox",
+        "zen-browser",
         "discord",
         "blender",
         "gimp",
@@ -324,6 +242,7 @@ wallpaper_scheme = "faithful"
         "heroiclauncher",
         "prismlauncher",
         "steam",
+        "vicinae",
         "fastfetch",
         "obs",
         "papirus-icons",
@@ -334,16 +253,13 @@ wallpaper_scheme = "faithful"
     ]
 
 [wallpaper.default]
-path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/aesthetic.png"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-lywpjl_2560x1440.png"
 
 [wallpaper.last]
-path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/aesthetic.png"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-lywpjl_2560x1440.png"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/ckjos/Pictures/Wallpapers/sel-walls_1/aesthetic.png"
-
-[weather]
-unit = "imperial"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-lywpjl_2560x1440.png"
 
 [widget.bar]
 show_idle_on_horizontal = false
@@ -356,10 +272,14 @@ type = "noctalia/timer:bar"
 [widget.bar_3]
 type = "noctalia/timer:bar"
 
+[widget.bluetooth]
+hide_when_no_connected_device = true
+
 [widget.cat]
 type = "dotnetrob/cat:cat"
 
-[widget.cat_2]
+[widget.cat_3]
+scale = 1.25
 type = "dotnetrob/cat:cat"
 
 [widget.clock]
@@ -387,8 +307,12 @@ type = "apex077/eyecare:eyecare-widget"
 custom_image = "/usr/share/icons/cachyos.svg"
 custom_image_colorize = true
 
+[widget.media]
+hide_when_no_media = true
+title_scroll = "on_hover"
+
 [widget.network]
-show_label = false
+show_label = true
 
 [widget.network_rx]
 label_show_units = true
@@ -403,9 +327,12 @@ label_show_units = true
 visualization = "none"
 
 [widget.taskbar]
-group_by_workspace = true
-group_single_icon_per_app = true
+group_by_workspace = false
 hide_empty_workspaces = true
+icon_scale = 1.5
+only_active_workspace = true
+pinned = [ "librewolf", "equibop", "vscodium", "steam" ]
+pinned_opacity = 1.0
 workspace_group_capsule = false
 
 [widget.temp]
@@ -413,7 +340,7 @@ visualization = "none"
 
 [widget.tray]
 detached_panel = true
-drawer = true
+drawer = false
 
 [widget.wallhaven]
 type = "noctalia/wallhaven:wallhaven"
