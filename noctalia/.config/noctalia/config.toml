@@ -4,7 +4,7 @@ enabled = true
 [bar]
 order = [ "default_with_system_stats", "default_without_system_stats", "system_stats_sidebar" ]
 
-    [bar.default_with_system_stats]
+    [bar.default_without_system_stats]
     background_opacity = 0.79999998211860657
     border = "primary"
     border_width = 2.0
@@ -15,7 +15,7 @@ order = [ "default_with_system_stats", "default_without_system_stats", "system_s
     margin_ends = 8
     radius = 0
 
-    [bar.default_without_system_stats]
+    [bar.default_with_system_stats]
     background_opacity = 0.79999998211860657
     border = "primary"
     border_width = 2.0
