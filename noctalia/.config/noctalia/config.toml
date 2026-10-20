@@ -2,16 +2,29 @@
 enabled = true
 
 [bar]
-order = [ "default", "defaultlayout", "windows", "sysmon" ]
+order = [ "default_with_system_stats", "default_without_system_stats", "system_stats_sidebar" ]
 
-    [bar.default]
-    background_opacity = 0.54999998770654202
+    [bar.default_with_system_stats]
+    background_opacity = 0.79999998211860657
     border = "primary"
     border_width = 2.0
     capsule_radius = 0
-    center = [ "bar", "date", "clock", "eyecare-widget" ]
+    center = [ "cat_2", "clock", "date", "bar", "eyecare-widget" ]
+    enabled = true
+    margin_edge = 8
+    margin_ends = 8
+    radius = 0
+
+    [bar.default_without_system_stats]
+    background_opacity = 0.79999998211860657
+    border = "primary"
+    border_width = 2.0
+    capsule_radius = 0
+    center = [ "cat_2", "cpu", "ram", "temp", "network_rx", "network_tx" ]
     end = [
         "media",
+        "clock",
+        "date",
         "tray",
         "notifications",
         "clipboard",
@@ -24,37 +37,25 @@ order = [ "default", "defaultlayout", "windows", "sysmon" ]
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "workspaces", "wallhaven", "active_window" ]
+    start = [ "launcher", "wallpaper", "wallhaven", "workspaces", "bar", "active_window", "eyecare-widget" ]
 
-    [bar.defaultlayout]
-    background_opacity = 0.54999998770654202
-    capsule_radius = 0
-    enabled = false
-    margin_edge = 8
-    radius = 0
-
-    [bar.sysmon]
-    background_opacity = 0.54999998770654202
+    [bar.system_stats_sidebar]
+    background_opacity = 0.79999998211860657
     border = "primary"
     border_width = 2.0
     capsule_radius = 0
     center = [ "cat_3", "cpu", "ram", "temp", "network_rx", "network_tx" ]
-    enabled = true
+    enabled = false
     end = []
     margin_edge = 8
     margin_ends = 380
-    position = "left"
+    position = "right"
     radius = 0
     reserve_space = false
-    scale = 1.2500000111758709
-    smart_auto_hide = true
+    scale = 1.25
+    smart_auto_hide = false
     start = []
     thickness = 100
-
-    [bar.windows]
-    capsule_radius = 0
-    enabled = false
-    radius = 0
 
 [control_center]
 sidebar_section = "none"
@@ -71,13 +72,13 @@ widget_order = []
     [desktop_widgets.widget]
 
 [dock]
-background_opacity = 0.54999998770654202
+background_opacity = 0.8
 border = "primary"
 border_width = 2.0
 enabled = true
+inactive_opacity = 0.85
 launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
-launcher_position = "start"
 margin_edge = 8
 pinned = [ "librewolf", "equibop", "kitty" ]
 radius = 0
@@ -123,12 +124,12 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
         show_weather = true
 
 [notification]
-background_opacity = 0.54999998770654202
+background_opacity = 0.79999998211860657
 border_color = "primary"
 border_width = 2.0
 
 [osd]
-background_opacity = 0.54999998770654202
+background_opacity = 0.79999998211860657
 border_color = "primary"
 border_width = 2.0
 
@@ -187,12 +188,16 @@ enabled = [
     name = "me-plugins-local"
 
 [shell]
+avatar_path = "/home/ckjos/Desktop/images/Dropped Image.png"
 corner_radius_scale = 0.0
 font_family = "Maple Mono NF"
 niri_overview_type_to_launch_enabled = true
+polkit_agent = true
 
     [shell.launcher]
-    app_grid = false
+    categories = false
+    pinned = [ "librewolf", "equibop", "kitty" ]
+    search_position = "top"
     show_app_actions = true
 
         [shell.launcher.providers.panels]
@@ -209,10 +214,10 @@ niri_overview_type_to_launch_enabled = true
     border_width = 2.0
     control_center_placement = "floating"
     open_near_click_control_center = true
-    open_near_click_launcher = false
+    open_near_click_launcher = true
     open_near_click_session = true
     session_placement = "floating"
-    transparency_mode = "glass"
+    transparency_mode = "soft"
     wallpaper_placement = "floating"
 
     [shell.screen_corners]
@@ -222,14 +227,15 @@ niri_overview_type_to_launch_enabled = true
     grid = true
 
 [theme]
-builtin = "Rosé Pine"
+builtin = "Tokyo-Night"
 community_palette = "Catppuccin Mocha Lavender"
 custom_palette = "custom"
+mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "soft"
 
     [theme.templates]
-    builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "mango", "niri", "qt" ]
+    builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "mango", "niri", "qt" ]
     community_ids = [
         "pywalfox",
         "zen-browser",
@@ -253,13 +259,43 @@ wallpaper_scheme = "soft"
     ]
 
 [wallpaper.default]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-lywpjl_2560x1440.png"
+path = "/home/ckjos/Pictures/daily-wallpaper/bing-en-us-2026-10-19.jpg"
 
 [wallpaper.last]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-lywpjl_2560x1440.png"
+path = "/home/ckjos/Pictures/daily-wallpaper/bing-en-us-2026-10-19.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/wallhaven-lywpjl_2560x1440.png"
+path = "/home/ckjos/Pictures/daily-wallpaper/bing-en-us-2026-10-19.jpg"
+
+[[wallpaper.favorite]]
+builtin_palette = "Rosé Pine"
+palette_source = "builtin"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Minimal/wallhaven-k81oj1.png"
+theme_mode = "dark"
+
+[[wallpaper.favorite]]
+builtin_palette = "Rosé Pine"
+palette_source = "builtin"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-xepp7d.jpg"
+theme_mode = "dark"
+
+[[wallpaper.favorite]]
+community_palette = "Catppuccin Mocha Lavender"
+palette_source = "community"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
+theme_mode = "dark"
+
+[[wallpaper.favorite]]
+builtin_palette = "Tokyo-Night"
+palette_source = "builtin"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-lyz3d2_2560x1440.png"
+theme_mode = "dark"
+
+[[wallpaper.favorite]]
+builtin_palette = "Dracula"
+palette_source = "builtin"
+path = "/home/ckjos/Pictures/Wallpapers/cachyos-wallpapers/Dracula.png"
+theme_mode = "dark"
 
 [widget.bar]
 show_idle_on_horizontal = false
@@ -278,8 +314,10 @@ hide_when_no_connected_device = true
 [widget.cat]
 type = "dotnetrob/cat:cat"
 
+[widget.cat_2]
+type = "dotnetrob/cat:cat"
+
 [widget.cat_3]
-scale = 1.25
 type = "dotnetrob/cat:cat"
 
 [widget.clock]
@@ -340,7 +378,8 @@ visualization = "none"
 
 [widget.tray]
 detached_panel = true
-drawer = false
+drawer = true
+hide_passive = false
 
 [widget.wallhaven]
 type = "noctalia/wallhaven:wallhaven"
