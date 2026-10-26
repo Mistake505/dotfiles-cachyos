@@ -2,62 +2,134 @@
 enabled = true
 
 [bar]
-order = [ "default_with_system_stats", "default_without_system_stats", "system_stats_sidebar" ]
+order = [ "default_sysmon", "default_sysmon_taskbar", "default_taskbar", "sysmon_stats", "default" ]
 
-    [bar.default_with_system_stats]
+    [bar.default]
     background_opacity = 0.79999998211860657
     border = "primary"
     border_width = 2.0
+    capsule = true
+    capsule_border = "outline"
+    capsule_opacity = 0.79999998211860657
     capsule_radius = 0
-    center = [ "cat_6", "cpu", "ram", "temp", "network_rx", "network_tx" ]
-    enabled = true
+    center = [ "cat_4", "clock", "date", "eyecare_widget_4", "bar_5" ]
+    enabled = false
     end = [
         "media",
-        "clock",
-        "date",
         "tray",
         "notifications",
         "clipboard",
         "network",
         "bluetooth",
         "volume",
-        "brightness",
-        "battery",
-        "control-center",
+        "colorscheme_variants_widget_5",
         "session"
     ]
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "wallhaven_4", "workspaces", "bar_4", "active_window", "eyecare_widget_3" ]
+    start = [ "launcher", "wallpaper", "wallhaven_5", "workspaces" ]
 
-    [bar.default_without_system_stats]
-    background_opacity = 0.79999998211860657
+    [bar.default_sysmon]
     border = "primary"
     border_width = 2.0
+    capsule_border = "outline"
+    capsule_opacity = 0.79999998211860657
     capsule_radius = 0
-    center = [ "cat_4", "bar_5", "clock", "date", "eyecare_widget_4" ]
+    center = [ "cat_6", "cpu", "ram", "temp", "network_rx", "network_tx" ]
     enabled = false
+    end = [
+        "clock",
+        "date",
+        "bar_4",
+        "eyecare_widget_3",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "colorscheme_variants_widget_4",
+        "session"
+    ]
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "workspaces", "wallhaven_5", "active_window" ]
+    start = [ "launcher", "wallpaper", "wallhaven_4", "workspaces", "media" ]
 
-    [bar.system_stats_sidebar]
+    [bar.default_sysmon_taskbar]
     background_opacity = 0.79999998211860657
     border = "primary"
     border_width = 2.0
+    capsule = true
+    capsule_border = "outline"
+    capsule_opacity = 0.79999998211860657
     capsule_radius = 0
-    center = [ "cat_5", "cpu", "ram", "temp", "network_rx", "network_tx" ]
-    concave_edge_corners = false
+    center = [ "cat_6", "cpu", "ram", "temp", "network_rx", "network_tx" ]
+    enabled = true
+    end = [
+        "clock",
+        "date",
+        "bar_4",
+        "eyecare_widget_3",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "colorscheme_variants_widget_4",
+        "session"
+    ]
+    margin_edge = 8
+    margin_ends = 8
+    radius = 0
+    start = [ "launcher", "wallpaper", "wallhaven_4", "taskbar", "media" ]
+
+    [bar.default_taskbar]
+    background_opacity = 0.79999998211860657
+    border = "primary"
+    border_width = 2.0
+    capsule = true
+    capsule_border = "outline"
+    capsule_opacity = 0.79999998211860657
+    capsule_radius = 0
+    center = [ "cat_4", "clock", "date", "eyecare_widget_4", "bar_5" ]
     enabled = false
+    end = [
+        "media",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "colorscheme_variants_widget_5",
+        "session"
+    ]
+    margin_edge = 8
+    margin_ends = 8
+    radius = 0
+    start = [ "launcher", "wallpaper", "wallhaven_5", "taskbar" ]
+
+    [bar.sysmon_stats]
+    background_opacity = 0.79999998211860657
+    border = "primary"
+    border_width = 2.0
+    capsule = true
+    capsule_border = "outline"
+    capsule_opacity = 0.79999998211860657
+    capsule_radius = 0
+    center = [ "cat_7", "cpu", "ram", "temp", "network_rx", "network_tx" ]
     end = []
+    margin_ends = 349
     position = "right"
     radius = 0
     reserve_space = false
     scale = 1.2500000111758709
+    smart_auto_hide = true
     start = []
-    thickness = 100
+    thickness = 120
 
 [control_center]
 sidebar_section = "none"
@@ -128,12 +200,10 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
 
 [notification]
 background_opacity = 0.79999998211860657
-border_color = "primary"
 border_width = 2.0
 
 [osd]
 background_opacity = 0.79999998211860657
-border_color = "primary"
 border_width = 2.0
 
 [plugin_settings."dotnetrob/cat"]
@@ -166,7 +236,8 @@ enabled = [
     "noctalia/timer",
     "whyoolw/dropwall",
     "uozzoku/colorscheme_variants",
-    "nzlov/daily-wallpaper"
+    "nzlov/daily-wallpaper",
+    "noctalia/kaomoji"
 ]
 
     [[plugins.source]]
@@ -200,7 +271,6 @@ polkit_agent = true
     [shell.launcher]
     categories = false
     pinned = [ "librewolf", "equibop", "kitty" ]
-    search_position = "top"
     show_app_actions = true
 
         [shell.launcher.providers.panels]
@@ -217,7 +287,6 @@ polkit_agent = true
     border_width = 2.0
     control_center_placement = "floating"
     open_near_click_control_center = true
-    open_near_click_launcher = true
     open_near_click_session = true
     session_placement = "floating"
     transparency_mode = "soft"
@@ -226,16 +295,19 @@ polkit_agent = true
     [shell.screen_corners]
     size = 1
 
+    [shell.screenshot]
+    directory = "/home/ckjos/Pictures/screenshots"
+
     [shell.session]
     grid = true
 
 [theme]
-builtin = "Tokyo-Night"
-community_palette = "Catppuccin Mocha Lavender"
-custom_palette = "custom"
+builtin = "Catppuccin"
+community_palette = "Creamy Forest"
+custom_palette = "_live_preview"
 mode = "dark"
-source = "community"
-wallpaper_scheme = "soft"
+source = "builtin"
+wallpaper_scheme = "vibrant"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "mango", "niri", "qt" ]
@@ -261,6 +333,10 @@ wallpaper_scheme = "soft"
         "yazi"
     ]
 
+        [theme.templates.user.palette_creator_live]
+        input_path = "/home/ckjos/.local/state/noctalia/plugins/materialized/community/palette-creator/templates/live-snapshot.tpl"
+        output_path = "/home/ckjos/.local/state/noctalia/plugin-data/kyle-palette-creator/live-snapshot.json"
+
 [wallpaper.default]
 path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
 
@@ -273,19 +349,7 @@ path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
 [[wallpaper.favorite]]
 builtin_palette = "Rosé Pine"
 palette_source = "builtin"
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Minimal/wallhaven-k81oj1.png"
-theme_mode = "dark"
-
-[[wallpaper.favorite]]
-builtin_palette = "Rosé Pine"
-palette_source = "builtin"
 path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-xepp7d.jpg"
-theme_mode = "dark"
-
-[[wallpaper.favorite]]
-community_palette = "Catppuccin Mocha Lavender"
-palette_source = "community"
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
 theme_mode = "dark"
 
 [[wallpaper.favorite]]
@@ -299,6 +363,21 @@ builtin_palette = "Dracula"
 palette_source = "builtin"
 path = "/home/ckjos/Pictures/Wallpapers/cachyos-wallpapers/Dracula.png"
 theme_mode = "dark"
+
+[[wallpaper.favorite]]
+builtin_palette = "Rosé Pine"
+palette_source = "builtin"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-k81oj1.png"
+theme_mode = "dark"
+
+[[wallpaper.favorite]]
+builtin_palette = "Catppuccin"
+palette_source = "builtin"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
+theme_mode = "dark"
+
+[widget.active_window]
+title_scroll = "on_hover"
 
 [widget.bar]
 show_idle_on_horizontal = false
@@ -340,6 +419,9 @@ type = "dotnetrob/cat:cat"
 [widget.cat_6]
 type = "dotnetrob/cat:cat"
 
+[widget.cat_7]
+type = "dotnetrob/cat:cat"
+
 [widget.clock]
 format = "{:%I:%M %p}"
 
@@ -352,6 +434,12 @@ type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
 [widget.colorscheme_variants_widget_3]
 type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
 
+[widget.colorscheme_variants_widget_4]
+type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
+
+[widget.colorscheme_variants_widget_5]
+type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
+
 [widget.cpu]
 visualization = "none"
 
@@ -362,9 +450,11 @@ type = "apex077/eyecare:eyecare-widget"
 type = "apex077/eyecare:eyecare-widget"
 
 [widget.eyecare_widget_3]
+enabled = true
 type = "apex077/eyecare:eyecare-widget"
 
 [widget.eyecare_widget_4]
+enabled = true
 type = "apex077/eyecare:eyecare-widget"
 
 [widget.launcher]
@@ -372,6 +462,7 @@ custom_image = "/usr/share/icons/cachyos.svg"
 custom_image_colorize = true
 
 [widget.media]
+enabled = true
 hide_when_no_media = true
 title_scroll = "on_hover"
 
@@ -394,13 +485,9 @@ visualization = "none"
 stat = "gpu_usage"
 
 [widget.taskbar]
-group_by_workspace = false
-hide_empty_workspaces = true
-icon_scale = 1.5
-only_active_workspace = true
-pinned = [ "librewolf", "equibop", "vscodium", "steam" ]
-pinned_opacity = 1.0
-workspace_group_capsule = false
+group_by_workspace = true
+group_single_icon_per_app = false
+workspace_label_placement = "inside"
 
 [widget.temp]
 visualization = "none"
@@ -426,4 +513,5 @@ type = "noctalia/wallhaven:wallhaven"
 type = "noctalia/wallhaven:wallhaven"
 
 [widget.workspaces]
-show_labels = false
+active_pill_size = 2.2000000000000002
+style = "minimal"
