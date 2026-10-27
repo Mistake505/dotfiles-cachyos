@@ -60,8 +60,8 @@ binds {
     Mod+Shift+Down                       { move-window-down-or-to-workspace-down; }
     Mod+Shift+Up                         { move-window-up-or-to-workspace-up; }
     Mod+Shift+Right                      { move-column-right; }
-    
-    Mod+Shift+W                          { move-window-up-or-to-workspace-up; } 
+
+    Mod+Shift+W                          { move-window-up-or-to-workspace-up; }
     Mod+Shift+A                          { move-column-left; }
     Mod+Shift+S                          { move-window-down-or-to-workspace-down; }
     Mod+Shift+D                          { move-column-right; }
@@ -142,8 +142,8 @@ binds {
     Mod+M                               { maximize-window-to-edges; }
 
     // ─── Screenshots ───
-    Print                        { screenshot; }
-    CTRL+Print                        { screenshot-screen; }
+    Print                        { spawn "noctalia" "msg" "screenshot-region"; }
+    CTRL+Print                        { spawn "noctalia" "msg" "screenshot-fullscreen"; }
     ALT+Print                        { screenshot-window; }
 
     // ─── Emergency Escape Key ───

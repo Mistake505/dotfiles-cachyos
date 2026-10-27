@@ -2,7 +2,7 @@
 enabled = true
 
 [bar]
-order = [ "default_sysmon", "default_sysmon_taskbar", "default_taskbar", "sysmon_stats", "default" ]
+order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskbar", "sysmon_stats" ]
 
     [bar.default]
     background_opacity = 0.79999998211860657
@@ -14,21 +14,11 @@ order = [ "default_sysmon", "default_sysmon_taskbar", "default_taskbar", "sysmon
     capsule_radius = 0
     center = [ "cat_4", "clock", "date", "eyecare_widget_4", "bar_5" ]
     enabled = false
-    end = [
-        "media",
-        "tray",
-        "notifications",
-        "clipboard",
-        "network",
-        "bluetooth",
-        "volume",
-        "colorscheme_variants_widget_5",
-        "session"
-    ]
+    end = [ "media", "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "session" ]
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "wallhaven_5", "workspaces" ]
+    start = [ "launcher", "wallpaper", "workspaces" ]
 
     [bar.default_sysmon]
     border = "primary"
@@ -49,13 +39,12 @@ order = [ "default_sysmon", "default_sysmon_taskbar", "default_taskbar", "sysmon
         "network",
         "bluetooth",
         "volume",
-        "colorscheme_variants_widget_4",
         "session"
     ]
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "wallhaven_4", "workspaces", "media" ]
+    start = [ "launcher", "wallpaper", "workspaces", "media" ]
 
     [bar.default_sysmon_taskbar]
     background_opacity = 0.79999998211860657
@@ -78,13 +67,12 @@ order = [ "default_sysmon", "default_sysmon_taskbar", "default_taskbar", "sysmon
         "network",
         "bluetooth",
         "volume",
-        "colorscheme_variants_widget_4",
         "session"
     ]
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "wallhaven_4", "taskbar", "media" ]
+    start = [ "launcher", "wallpaper", "taskbar", "media" ]
 
     [bar.default_taskbar]
     background_opacity = 0.79999998211860657
@@ -95,32 +83,21 @@ order = [ "default_sysmon", "default_sysmon_taskbar", "default_taskbar", "sysmon
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_4", "clock", "date", "eyecare_widget_4", "bar_5" ]
-    enabled = false
-    end = [
-        "media",
-        "tray",
-        "notifications",
-        "clipboard",
-        "network",
-        "bluetooth",
-        "volume",
-        "colorscheme_variants_widget_5",
-        "session"
-    ]
+    end = [ "media", "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "session" ]
     margin_edge = 8
     margin_ends = 8
     radius = 0
-    start = [ "launcher", "wallpaper", "wallhaven_5", "taskbar" ]
+    start = [ "launcher", "wallpaper", "taskbar" ]
 
     [bar.sysmon_stats]
     background_opacity = 0.79999998211860657
     border = "primary"
     border_width = 2.0
-    capsule = true
     capsule_border = "outline"
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_7", "cpu", "ram", "temp", "network_rx", "network_tx" ]
+    enabled = false
     end = []
     margin_ends = 349
     position = "right"
@@ -149,7 +126,7 @@ widget_order = []
 background_opacity = 0.79999998211860657
 border = "primary"
 border_width = 2.0
-enabled = true
+enabled = false
 inactive_opacity = 0.84999998100101948
 launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
@@ -264,7 +241,6 @@ enabled = [
 [shell]
 avatar_path = "/home/ckjos/Desktop/images/Dropped Image.png"
 corner_radius_scale = 0.0
-font_family = "Maple Mono NF"
 niri_overview_type_to_launch_enabled = true
 polkit_agent = true
 
@@ -302,11 +278,9 @@ polkit_agent = true
     grid = true
 
 [theme]
-builtin = "Catppuccin"
-community_palette = "Creamy Forest"
+community_palette = "Catppuccin Mocha Rosewater"
 custom_palette = "_live_preview"
 mode = "dark"
-source = "builtin"
 wallpaper_scheme = "vibrant"
 
     [theme.templates]
@@ -338,13 +312,13 @@ wallpaper_scheme = "vibrant"
         output_path = "/home/ckjos/.local/state/noctalia/plugin-data/kyle-palette-creator/live-snapshot.json"
 
 [wallpaper.default]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-xepp7d.jpg"
 
 [wallpaper.last]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-xepp7d.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-xepp7d.jpg"
 
 [[wallpaper.favorite]]
 builtin_palette = "Rosé Pine"
@@ -434,12 +408,6 @@ type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
 [widget.colorscheme_variants_widget_3]
 type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
 
-[widget.colorscheme_variants_widget_4]
-type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
-
-[widget.colorscheme_variants_widget_5]
-type = "uozzoku/colorscheme_variants:colorscheme_variants_widget"
-
 [widget.cpu]
 visualization = "none"
 
@@ -504,12 +472,6 @@ type = "noctalia/wallhaven:wallhaven"
 type = "noctalia/wallhaven:wallhaven"
 
 [widget.wallhaven_3]
-type = "noctalia/wallhaven:wallhaven"
-
-[widget.wallhaven_4]
-type = "noctalia/wallhaven:wallhaven"
-
-[widget.wallhaven_5]
 type = "noctalia/wallhaven:wallhaven"
 
 [widget.workspaces]
