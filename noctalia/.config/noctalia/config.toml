@@ -9,7 +9,7 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     border = "primary"
     border_width = 2.0
     capsule = true
-    capsule_border = "outline"
+    capsule_border = "outline_variant"
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_4", "clock", "date", "eyecare_widget_4", "bar_5" ]
@@ -24,7 +24,7 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     border = "primary"
     border_width = 2.0
     capsule = true
-    capsule_border = "outline"
+    capsule_border = "outline_variant"
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_6", "cpu", "ram", "temp", "network_rx", "network_tx" ]
@@ -52,7 +52,7 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     border = "primary"
     border_width = 2.0
     capsule = true
-    capsule_border = "outline"
+    capsule_border = "outline_variant"
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_6", "cpu", "ram", "temp", "network_rx", "network_tx" ]
@@ -79,7 +79,7 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     border = "primary"
     border_width = 2.0
     capsule = true
-    capsule_border = "outline"
+    capsule_border = "outline_variant"
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_4", "clock", "date", "eyecare_widget_4", "bar_5" ]
@@ -95,7 +95,7 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     border = "primary"
     border_width = 2.0
     capsule = true
-    capsule_border = "outline"
+    capsule_border = "outline_variant"
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_7", "cpu", "ram", "temp", "network_rx", "network_tx" ]
@@ -162,7 +162,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1" ]
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -250,7 +250,9 @@ polkit_agent = true
     [shell.launcher]
     categories = false
     pinned = [ "librewolf", "equibop", "kitty" ]
+    search_position = "top"
     show_app_actions = true
+    width = 720
 
         [shell.launcher.providers.panels]
         global = true
@@ -322,13 +324,13 @@ wallpaper_scheme = "faithful"
         output_path = "/home/ckjos/.local/state/noctalia/plugin-data/kyle-palette-creator/live-snapshot.json"
 
 [wallpaper.default]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-xepp7d.jpg"
+path = "/home/ckjos/Pictures/daily-wallpaper/bing-en-us-2026-10-26.jpg"
 
 [wallpaper.last]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-xepp7d.jpg"
+path = "/home/ckjos/Pictures/daily-wallpaper/bing-en-us-2026-10-26.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-xepp7d.jpg"
+path = "/home/ckjos/Pictures/daily-wallpaper/bing-en-us-2026-10-26.jpg"
 
 [[wallpaper.favorite]]
 builtin_palette = "Rosé Pine"
