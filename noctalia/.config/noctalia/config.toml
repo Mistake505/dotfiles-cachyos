@@ -23,6 +23,7 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     [bar.default_sysmon]
     border = "primary"
     border_width = 2.0
+    capsule = true
     capsule_border = "outline"
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
@@ -55,7 +56,6 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_6", "cpu", "ram", "temp", "network_rx", "network_tx" ]
-    enabled = true
     end = [
         "clock",
         "date",
@@ -83,6 +83,7 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_4", "clock", "date", "eyecare_widget_4", "bar_5" ]
+    enabled = false
     end = [ "media", "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "session" ]
     margin_edge = 8
     margin_ends = 8
@@ -93,12 +94,14 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     background_opacity = 0.79999998211860657
     border = "primary"
     border_width = 2.0
+    capsule = true
     capsule_border = "outline"
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_7", "cpu", "ram", "temp", "network_rx", "network_tx" ]
     enabled = false
     end = []
+    margin_edge = 8
     margin_ends = 349
     position = "right"
     radius = 0
@@ -126,7 +129,6 @@ widget_order = []
 background_opacity = 0.79999998211860657
 border = "primary"
 border_width = 2.0
-enabled = false
 inactive_opacity = 0.84999998100101948
 launcher_custom_image = "/usr/share/icons/cachyos.svg"
 launcher_custom_image_colorize = true
@@ -241,6 +243,7 @@ enabled = [
 [shell]
 avatar_path = "/home/ckjos/Desktop/images/Dropped Image.png"
 corner_radius_scale = 0.0
+font_family = "Maple Mono NF"
 niri_overview_type_to_launch_enabled = true
 polkit_agent = true
 
@@ -272,16 +275,23 @@ polkit_agent = true
     size = 1
 
     [shell.screenshot]
+    annotate = true
+    confirm_region = true
     directory = "/home/ckjos/Pictures/screenshots"
 
     [shell.session]
     grid = true
 
+    [shell.window_switcher]
+    mru = true
+
 [theme]
+builtin = "Rosé Pine"
 community_palette = "Catppuccin Mocha Rosewater"
 custom_palette = "_live_preview"
 mode = "dark"
-wallpaper_scheme = "vibrant"
+source = "builtin"
+wallpaper_scheme = "faithful"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "mango", "niri", "qt" ]
