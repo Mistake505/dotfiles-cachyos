@@ -13,7 +13,6 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_4", "clock", "date", "eyecare_widget_4", "bar_5" ]
-    enabled = false
     end = [ "media", "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "session" ]
     margin_edge = 8
     margin_ends = 8
@@ -21,6 +20,7 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     start = [ "launcher", "wallpaper", "workspaces" ]
 
     [bar.default_sysmon]
+    background_opacity = 0.79999998211860657
     border = "primary"
     border_width = 2.0
     capsule = true
@@ -28,7 +28,6 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_6", "cpu", "ram", "temp", "network_rx", "network_tx" ]
-    enabled = false
     end = [
         "clock",
         "date",
@@ -83,7 +82,6 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_4", "clock", "date", "eyecare_widget_4", "bar_5" ]
-    enabled = false
     end = [ "media", "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "session" ]
     margin_edge = 8
     margin_ends = 8
@@ -99,7 +97,6 @@ order = [ "default", "default_sysmon", "default_taskbar", "default_sysmon_taskba
     capsule_opacity = 0.79999998211860657
     capsule_radius = 0
     center = [ "cat_7", "cpu", "ram", "temp", "network_rx", "network_tx" ]
-    enabled = false
     end = []
     margin_edge = 8
     margin_ends = 349
@@ -250,7 +247,6 @@ polkit_agent = true
     [shell.launcher]
     categories = false
     pinned = [ "librewolf", "equibop", "kitty" ]
-    search_position = "top"
     show_app_actions = true
     width = 720
 
@@ -288,12 +284,12 @@ polkit_agent = true
     mru = true
 
 [theme]
-builtin = "Rosé Pine"
+builtin = "Catppuccin"
 community_palette = "Catppuccin Mocha Rosewater"
 custom_palette = "_live_preview"
 mode = "dark"
 source = "builtin"
-wallpaper_scheme = "faithful"
+wallpaper_scheme = "vibrant"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "mango", "niri", "qt" ]
@@ -324,13 +320,13 @@ wallpaper_scheme = "faithful"
         output_path = "/home/ckjos/.local/state/noctalia/plugin-data/kyle-palette-creator/live-snapshot.json"
 
 [wallpaper.default]
-path = "/home/ckjos/Pictures/daily-wallpaper/bing-en-us-2026-10-26.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
 
 [wallpaper.last]
-path = "/home/ckjos/Pictures/daily-wallpaper/bing-en-us-2026-10-26.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/ckjos/Pictures/daily-wallpaper/bing-en-us-2026-10-26.jpg"
+path = "/home/ckjos/Pictures/Wallpapers/wallhaven/Themed/wallhaven-jevz8y.png"
 
 [[wallpaper.favorite]]
 builtin_palette = "Rosé Pine"
