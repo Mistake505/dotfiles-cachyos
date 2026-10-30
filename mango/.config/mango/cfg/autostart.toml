@@ -1,0 +1,10 @@
+# | Auto Start |
+# autostart your favorite applications here
+
+[global]
+exec_once = [
+    "noctalia &"
+    #, "sleep 3 && noctalia msg panel-toggle kenn/keybind-cheatsheet:cheatsheet"
+]
+
+# Only to show the keybinds in your first session

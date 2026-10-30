@@ -1,0 +1,14 @@
+[global]
+source = [
+    "./cfg/monitors.toml",
+    "./cfg/keybinds.toml",
+    "./cfg/input.toml",
+    "./cfg/autostart.toml",
+    "./cfg/env.toml",
+    "./cfg/appearance.toml",
+    "./cfg/layout.toml",
+    "./cfg/misc.toml",
+    "./cfg/rules.toml",
+
+    "./noctalia.conf",
+]
