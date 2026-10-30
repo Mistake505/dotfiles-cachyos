@@ -73,7 +73,7 @@
 "SUPER+t"       = "togglefloating"
 "SUPER+f"       = "togglemaximizescreen"
 "SUPER+SHIFT+f" = "togglefullscreen"
-"SUPER+ALT+f"   = "togglefakefullscreen"
+# "SUPER+ALT+f"   = "togglefakefullscreen"
 "SUPER+i"       = "minimized"
 "SUPER+o"       = "toggleoverlay"
 "SUPER+SHIFT+i" = "restore_minimized"
