@@ -14,10 +14,10 @@
 
 # Noctalia specific keybinds.
 "SUPER+space"   = "spawn, noctalia msg panel-toggle launcher"
-"SUPER+s"       = "spawn, noctalia msg panel-toggle control-center"
-"SUPER+SHIFT+s" = "spawn, noctalia msg settings-toggle"
-"SUPER+w"       = "spawn, noctalia msg panel-toggle wallpaper"
-"SUPER+SHIFT+w" = "spawn, noctalia msg panel-toggle noctalia/wallhaven:browser"
+# "SUPER+s"       = "spawn, noctalia msg panel-toggle control-center"
+# "SUPER+SHIFT+s" = "spawn, noctalia msg settings-toggle"
+# "SUPER+w"       = "spawn, noctalia msg panel-toggle wallpaper"
+# "SUPER+SHIFT+w" = "spawn, noctalia msg panel-toggle noctalia/wallhaven:browser"
 "SUPER+v"       = "spawn, noctalia msg panel-toggle clipboard"
 "SUPER+SHIFT+q" = "spawn, noctalia msg panel-toggle session"
 
@@ -30,7 +30,7 @@
 # "CTRL+SHIFT+PRINT" = "spawn, noctalia msg screenshot-fullscreen all"
 
 # Reload config
-"SUPER+r" = "reload_config"
+# "SUPER+r" = "reload_config"
 
 # Media controls
 "XF86AudioRaiseVolume" = "spawn, noctalia msg volume-up"
@@ -52,7 +52,17 @@
 "SUPER+Up"    = "focusdir, up"
 "SUPER+Down"  = "focusdir, down"
 
+"SUPER+W"    = "focusdir, up"
+"SUPER+A"  = "focusdir, left"
+"SUPER+D" = "focusdir, right"
+"SUPER+S"  = "focusdir, down"
+
 # Swap window
+"SUPER+SHIFT+W"    = "exchange_client, up"
+"SUPER+SHIFT+A"  = "exchange_client, left"
+"SUPER+SHIFT+S"  = "exchange_client, down"
+"SUPER+SHIFT+D" = "exchange_client, right"
+
 "SUPER+SHIFT+Up"    = "exchange_client, up"
 "SUPER+SHIFT+Down"  = "exchange_client, down"
 "SUPER+SHIFT+Left"  = "exchange_client, left"
