@@ -74,9 +74,9 @@
 "SUPER+f"       = "togglemaximizescreen"
 "SUPER+SHIFT+f" = "togglefullscreen"
 "SUPER+ALT+f"   = "togglefakefullscreen"
-"SUPER+m"       = "minimized"
+"SUPER+i"       = "minimized"
 "SUPER+o"       = "toggleoverlay"
-"SUPER+SHIFT+m" = "restore_minimized"
+"SUPER+SHIFT+i" = "restore_minimized"
 "SUPER+z"       = "toggle_scratchpad"
 
 "ALT+Tab"       = "overcircle, next"
