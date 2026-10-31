@@ -8,5 +8,5 @@ xwayland_persistence = 1
 
 drag_tile_to_tile = 1
 
-enable_hotarea = 1
-hotarea_corner = 0
+# enable_hotarea = 1
+hotarea_corner = 2

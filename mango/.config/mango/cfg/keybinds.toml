@@ -20,6 +20,7 @@
 # "SUPER+SHIFT+w" = "spawn, noctalia msg panel-toggle noctalia/wallhaven:browser"
 "SUPER+v"       = "spawn, noctalia msg panel-toggle clipboard"
 "SUPER+SHIFT+q" = "spawn, noctalia msg panel-toggle session"
+"SUPER+SHIFT+E" = "spawn, noctalia msg panel-toggle launcher /emo"
 
 # Keybinds Cheatsheet
 # "SUPER+SHIFT+k" = "spawn, noctalia msg panel-toggle kenn/keybind-cheatsheet:cheatsheet"
@@ -85,8 +86,8 @@
 "SUPER+CTRL+Tab" = "overcircle, prev"
 
 # Scroller layout
-"SUPER+SHIFT+e" = "set_proportion, 1.0"
-"SUPER+x" = "switch_proportion_preset"
+# "SUPER+SHIFT+e" = "set_proportion, 1.0"
+# "SUPER+x" = "switch_proportion_preset"
 
 # Switch layout
 "SUPER+l" = "spawn, noctalia msg panel-toggle ezequiel/mango_layouts:panel"
@@ -128,7 +129,7 @@
 "SUPER+SHIFT+R" = "togglegaps"
 
 # Movewin
-# "CTRL+SHIFT+Up"    = "movewin, +0, -50"
+#"CTRL+SHIFT+Up"    = "movewin, +0, -50"
 # "CTRL+SHIFT+Down"  = "movewin, +0, +50"
 # "CTRL+SHIFT+Left"  = "movewin, -50,+0"
 # "CTRL+SHIFT+Right" = "movewin, +50,+0"
